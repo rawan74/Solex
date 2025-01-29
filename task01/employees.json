@@ -1,0 +1,42 @@
+[
+  {
+    "empNumber": "001",
+    "name": "John Snow",
+    "salary": 65000,
+    "gender": "male",
+    "smoker": false,
+    "maritalStatus": "single",
+    "rating": 4,
+    "currency": "$"
+  },
+  {
+    "empNumber": "002",
+    "name": "Omar Marmosh",
+    "salary": 75000,
+    "gender": "male",
+    "smoker": true,
+    "maritalStatus": "married",
+    "rating": 5,
+    "currency": "€"
+  },
+  {
+    "empNumber": "003",
+    "name": "Hadia ghaleb",
+    "salary": 90000,
+    "gender": "female",
+    "smoker": false,
+    "maritalStatus": "married",
+    "rating": 5,
+    "currency": "€"
+  },
+  {
+    "empNumber": "004",
+    "name": "Ahmed orabi",
+    "salary": 10000,
+    "gender": "male",
+    "smoker": true,
+    "maritalStatus": "divorced",
+    "rating": 2,
+    "currency": "€"
+  }
+]
