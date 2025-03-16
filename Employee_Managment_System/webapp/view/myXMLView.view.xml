@@ -1,0 +1,202 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="roro.controller.Main"
+    xmlns:t="sap.ui.table"
+    xmlns:core="sap.ui.core"
+>
+    <App>
+        <Page title="My first XML View">
+            <content>
+                <!-- how to create a simple table -->
+                <t:Table
+                    id="rawraw"
+                    rows="{/empTable}"
+                    selectionMode="Single"
+                    visibleRowCount="4"
+                    rowSelectionChange="onSelect"
+                    alternateRowColors="true"
+                >
+                    <!-- this is agg. binding-->
+                    <t:columns>
+                        <t:Column>
+                            <t:label>
+                                <Label text="Emp Name" />
+                            </t:label>
+                            <t:template>
+                                <Input
+                                    value="{
+                                path: 'eName', 
+                                formatter: '.lifeSaver.convertToCaps'}"
+                                />
+                            </t:template>
+                        </t:Column>
+                        <t:Column>
+                            <t:label>
+                                <Label text="Emp No" />
+                            </t:label>
+                            <t:template>
+                                <Text
+                                    text="{eNo}"
+                                    textAlign="Right"
+                                    textDirection="RTL"
+                                />
+                            </t:template>
+                        </t:Column>
+                        <!-- <t:Column>
+                            <t:label>
+                                <Label text="Emp Name" />
+                            </t:label>
+                            <t:template>
+                                <Text text="{eName}" />
+                            </t:template>
+                        </t:Column> -->
+                        <t:Column>
+                            <t:label>
+                                <Label text="Salary" />
+                            </t:label>
+                            <t:template>
+                                <!-- combinin two controls together -->
+                                <HBox>
+                                    <!-- <Text text="{salary}" />
+                                    <Text text="{currency}" />
+                                    OR !! IF WANT A SPACE BETWEEN THEM  -->
+                                    <!-- <Text text="{salary} {currency}" /> -->
+                                    <Text
+                                        text="{
+                                    parts: [{path:'salary'},{path:'currency'}],
+                                    formatter: '.formatter.joinTwo'}"
+                                    />
+                                </HBox>
+                                <!-- <Text text="{salary}" /> -->
+                            </t:template>
+                        </t:Column>
+                        <!-- <t:Column>
+                            <t:label>
+                                <Label text="Currency" />
+                            </t:label>
+                            <t:template>
+                                <Text text="{currency}" />
+                            </t:template>
+                        </t:Column> -->
+                        <t:Column>
+                            <t:label>
+                                <Label text="Marital Status" />
+                            </t:label>
+                            <t:template>
+                                <Select selectedKey="{mStat}">
+                                    <items>
+                                        <core:Item
+                                            key="Single"
+                                            text="Single"
+                                        />
+                                        <core:Item
+                                            key="Married"
+                                            text="Married"
+                                        />
+                                        <core:Item
+                                            key="Divorced"
+                                            text="Divorced"
+                                        />
+                                    </items>
+                                </Select>
+                            </t:template>
+                        </t:Column>
+                        <t:Column>
+                            <t:label>
+                                <Label text="Smoker" />
+                            </t:label>
+                            <t:template>
+                                <CheckBox selected="{smoker}" />
+                            </t:template>
+                        </t:Column>
+                        <t:Column>
+                            <t:label>
+                                <Text text="Gender" />
+                            </t:label>
+                            <t:template>
+                                <Image
+                                    width="30px"
+                                    height="30px"
+                                    src="{gender}"
+                                />
+                            </t:template>
+                        </t:Column>
+                        <t:Column>
+                            <t:label>
+                                <Label text="Rating" />
+                            </t:label>
+                            <t:template>
+                                <RatingIndicator value="{rating}" />
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+                </t:Table>
+                <!-- created a simple from "FORM" namespace -->
+                <f:SimpleForm
+                    id="rr"
+                    editable="true"
+                >
+                    <f:content>
+                        <Label text="Emp id" />
+                        <!-- first sytanx of data biniding -->
+                        <!-- <Input
+                            id="user"
+                            value="{/empStr/eNo}"
+                            enabled="{/empStr/mario}"
+                        /> -->
+                        <Input
+                            id="user"
+                            value="{eNo}"
+                            enabled="{/empStr/mario}"
+                        />
+
+                        <!-- second sytanx of data biniding its called complex binding syntax && name of the model + ">" -->
+                        <!-- <Label text="Name"/>
+<Input value = "{path:'mango>/empStr/eName'}" enabled="{/empStr/mario}"/> -->
+
+                        <Label text="Name" />
+                        <!-- property binding -->
+                        <!-- <Input
+                            value="{path:'/empStr/eName'}"
+                            enabled="{/empStr/mario}"
+                        /> -->
+                        <Input
+                            value="{path:'eName'}"
+                            enabled="{/empStr/mario}"
+                        />
+                        <!-- exppresion binding -->
+                        <Label text="Salary" />
+                        <!-- <Input
+                            value=""
+                            id="idSal"
+                            enabled="{=${/empStr/eName} === 'mohamed salah' ? false : true}"
+                        /> -->
+                        <Input
+                            value="{salary}"
+                            id="idSal"
+                            enabled="{=${eName} === 'mohamed salah' ? false : true}"
+                        />
+
+                        <Label text="Currency" />
+                        <Input
+                            value="{currency}"
+                            id="idCurr"
+                            enabled="{/empStr/mario}"
+                        />
+                        <Label />
+                        <Button
+                            text="Magic"
+                            press="onMagic"
+                        />
+                        <Button
+                            text="Flip"
+                            press="onFlip"
+                        />
+                    </f:content>
+                </f:SimpleForm>
+            </content>
+        </Page>
+    </App>
+</mvc:View>

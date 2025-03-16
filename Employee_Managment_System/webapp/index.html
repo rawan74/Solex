@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_bluecrystal"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-resourceroots='
+    {
+        "roro": "./" 
+    }'
+      data-sap-ui-bindingSyntax="complex"
+    ></script>
+
+    <script>
+      var oView = new sap.ui.view("idrawan", {
+        viewName: "roro.view.myXMLView",
+        type: "XML",
+      });
+      oView.placeAt("content");
+      //     var oView = sap.ui.jsview("idrawan", "roro.view.Main");
+      //   oView.placeAt("content");
+    </script>
+  </head>
+  <body class="sapUiBody">
+    <div id="content"></div>
+  </body>
+</html>

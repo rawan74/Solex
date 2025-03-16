@@ -1,0 +1,61 @@
+{
+  "empStr": {
+    "eNo": "1000",
+    "eName": "abu treka",
+    "salary": 5000,
+    "currency": "USD",
+    "mario": true
+  },
+  "empTable": [
+    {
+      "eNo": "100",
+      "eName": "shalaby",
+      "salary": 6000,
+      "currency": "EGP",
+      "smoker": false,
+      "mStat": "Single",
+      "rating": 3,
+      "gender": "https://img.icons8.com/?size=100&id=1814&format=png&color=000000"
+    },
+    {
+      "eNo": "500",
+      "eName": "sha3nonti",
+      "salary": 96000,
+      "currency": "RYL",
+      "smoker": false,
+      "mStat": "Married",
+      "rating": 2,
+      "gender": "https://img.icons8.com/?size=100&id=1816&format=png&color=000000"
+    },
+    {
+      "eNo": "400",
+      "eName": "Mared washweshni",
+      "salary": 76000,
+      "currency": "USD",
+      "smoker": true,
+      "mStat": "Divorced",
+      "rating": 5,
+      "gender": "https://img.icons8.com/?size=100&id=1814&format=png&color=000000"
+    },
+    {
+      "eNo": "200",
+      "eName": "boo",
+      "salary": 80000,
+      "currency": "USD",
+      "smoker": false,
+      "mStat": "Married",
+      "rating": 5,
+      "gender": "https://img.icons8.com/?size=100&id=1816&format=png&color=000000"
+    },
+    {
+      "eNo": "300",
+      "eName": "Rose zahret el rabe3",
+      "salary": 90000,
+      "currency": "USD",
+      "smoker": true,
+      "mStat": "Single",
+      "rating": 4,
+      "gender": "https://img.icons8.com/?size=100&id=1816&format=png&color=000000"
+    }
+  ]
+}
